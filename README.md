@@ -24,3 +24,19 @@ On the local machine, navigate to the notesapp/amplify/data/resource.ts file and
 - The following updated code uses a per-owner authorization rule allow.owner() to restrict the note record’s access to the owner of the record. 
 
 - Amplify will automatically add an owner: a.string() field to each note which contains the note owner's identity information upon record creation.
+
+## Setting up Amplify Storage
+### Create a storage folder
+
+On your local machine, navigate to the notesapp/amplify folder, and create a new folder named storage, and then create a file named resource.ts inside of the new storage folder.
+
+# Deploy Amplify Cloud Sandbox
+1. Import backend definitions
+On the local machine, navigate to the amplify/backend.ts file, which imports both data and auth. Add the importation of stroge
+
+2. Start sandbox environment
+To start your own personal cloud sandbox environment that provides an isolated development space, in a new terminal window, run the following command in your apps root folder:
+
+<npx ampx sandbox>
+
+ - The sandbox allows you to rapidly build, test, and iterate on a fullstack app. Each developer on your team can use their own disposable sandbox environment connected to cloud resources.
