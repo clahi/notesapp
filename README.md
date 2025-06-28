@@ -37,6 +37,21 @@ On the local machine, navigate to the amplify/backend.ts file, which imports bot
 2. Start sandbox environment
 To start your own personal cloud sandbox environment that provides an isolated development space, in a new terminal window, run the following command in your apps root folder:
 
-<npx ampx sandbox>
+use `npx ampx sandbox` to start a sandbox environment
 
  - The sandbox allows you to rapidly build, test, and iterate on a fullstack app. Each developer on your team can use their own disposable sandbox environment connected to cloud resources.
+
+
+ # Building the Frontend
+
+ Using Amplify UI component library to scaffold out an entire user authentication flow, allowing users to sign up, sign in, and reset their password with just few lines of code. Additionally, you will build an app frontend that allows users to create, update, and delete their notes. They will also be able to upload an image and associate it with a note.
+
+ ## Steps to follow
+  - Install Amplify libraries
+  - Configure your React app to include authentication, data, and storage for the Notes feature
+
+### Installing the Amplify libraries
+
+We will need two Amplify libraries for your project. The main aws-amplify library contains all of the client-side APIs for connecting your app's frontend to your backend and the @aws-amplify/ui-react library contains framework-specific UI components.
+
+Use `npm install aws-amplify @aws-amplify/ui-react` to install the libraries.
