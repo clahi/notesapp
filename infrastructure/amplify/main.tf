@@ -24,6 +24,7 @@ resource "aws_amplify_app" "notesapp" {
         preBuild:
           commands:
             - cd notesapp
+            - nvm use 20
             - yarn install
         build:
           commands:
