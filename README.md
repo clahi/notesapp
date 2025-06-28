@@ -55,3 +55,17 @@ use `npx ampx sandbox` to start a sandbox environment
 We will need two Amplify libraries for your project. The main aws-amplify library contains all of the client-side APIs for connecting your app's frontend to your backend and the @aws-amplify/ui-react library contains framework-specific UI components.
 
 Use `npm install aws-amplify @aws-amplify/ui-react` to install the libraries.
+
+## Implement the UI flow for Notes feature
+
+In this step, you will update the src/App.jsx to configure the Amplify library with the client configuration file (amplify_outputs.json). Then, it will generate a data client using the generateClient() function.
+
+The code uses the Amplify Authenticator component to scaffold out an entire user authentication flow allowing users to sign up, sign in, reset their password, and confirm sign-in for multifactor authentication (MFA).
+
+Additionally, the code contains the following:
+
+ - fetchNotes - Use the data client to list the items in the Notes model.
+
+ - createNote - Get the data from the form and use the data client to create a new note if the user selects an image. Then, the function will upload this image to Amplify storage and associate it with the new note.
+
+ - deleteNote - Use the data client to delete the selected note.
